@@ -13,10 +13,9 @@
     </head>
 
     <body>
-        <!-- <div class="nav-fade"></div> -->
-        <div class="top-part home">
+        <div class="top-part">
+            <div class="nav-fade"></div>
             <div class="nav-icon">
-                <!-- <i class="fas fa-bars"></i> -->
                 <i class="bi bi-arrow-down-circle"></i>
             </div>
             <div class=logo>
@@ -32,10 +31,10 @@
                 <i class="bi bi-arrow-up-circle"></i>
             </div>
             <ul>
-                <li class="main_nav current">
+                <li class="main_nav">
                     <a href=index.html>Homepage</a>
                 </li>
-                <li class="main_nav">
+                <li class="main_nav current">
                     <a href=places.html>Places</a>
                 </li>
                 <li class="main_nav">
@@ -46,23 +45,30 @@
                 </li>
             </ul>
         </nav>
-        <section class="places">
-            <div class="place">
-                <h2>St. Lucia</h2>
-                <img>
-            </div>
-            <div class="place">
-                <h2>Italy</h2>
-                <img src="italy_main.JPG">
-            </div>
-            <div class="place">
-                <h2>Puerto Rico</h2>
-                <img>
-            </div>
-            <div class="place">
-                <h2>San Francisco</h2>
-                <img>
-            </div>
-        </section>
+        <main>
+            <h1 class="title">Places</h1>
+            <section class="places">
+                <div class="place" style="background-image: url(st_lucia.jpg);">
+                    <a href="places/st_lucia.html">
+                        <h2>St. Lucia</h2>
+                    </a>
+                </div>
+                <div class="place" style="background-image: url(italy.JPG);">
+                    <a href="places/italy.html">
+                        <h2>Italy</h2>
+                    </a>
+                </div>
+                <div class="place" style="background-image: url(puerto.JPG);">
+                    <a href="places/puerto.html">
+                        <h2>Puerto Rico</h2>
+                    </a>
+                </div>
+                <div class="place" style="background-image: url(san_fran.JPG);">
+                    <a href="places/san_fran.html">
+                        <h2>San Francisco</h2>
+                    </a>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
