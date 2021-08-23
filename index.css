@@ -1,0 +1,226 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+
+body {
+    font-family: 'Besley', serif;
+    font-size: 14px;
+    line-height: 1.25;
+    font-weight: 400;
+    background: #000;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+div#navbarNavDropdown.collapse.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+#main-quote {
+    position: absolute;
+    bottom: 50%;
+    padding-left: 40%;
+    padding-right: 30%;
+
+}
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+}
+
+video {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+nav {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 5;
+    background: #000000a3;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .75s cubic-bezier(0.87, 0, 0.13, 1);
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(nav-pic.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all .75s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+nav ul {
+    list-style: none;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 100px;
+    transition: all .75s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+
+nav ul li {
+    display: inline;
+    background-color: #72665499;
+    margin: 10px;
+}
+
+nav ul li:hover {
+    background-color: #726654;
+    transition: all .25s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@media only screen and (max-width: 840px) {
+    nav ul li {
+        display: block;
+        padding-bottom: 10px;
+    }
+}
+.nav-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-icon > i {
+    font-size: 35px;
+}
+
+.nav-icon:hover {
+    border-radius: 50%;
+}
+.top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 6;
+}
+top-part.home {
+    color: black;
+}
+
+.top-part > div {
+    padding: 15px;
+}
+.current a{
+    color: #250f03
+}
+.logo > h3 {
+    margin: 0;
+    font-size: 1.75em;
+    font-weight: 400;
+}
+
+.about {
+    margin-top: 100vh;
+}
+
+.bottom-fade {
+    width: 100%;
+    bottom: 0;
+    height: 50vh;
+    z-index: 2;
+    float: left;
+    position: absolute;
+    background: linear-gradient(to top, black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
+}
+
+#about-text {
+    font-family: 'Abel', sans-serif;
+    padding: 10%;
+    font-size: 25px;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav .nav-icon {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+}
+
+.title {
+    margin: 80px;
+    text-align: center;
+}
+
+.aerial-container {
+    padding: 5%;
+}
+/* .nav-fade {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    height: 150px;
+    pointer-events: none;
+    top: 0;
+    background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0.738) 19%, rgba(0, 0, 0, 0.541) 34%, rgba(0, 0, 0, 0.382) 47%, rgba(0, 0, 0, 0.278) 56.5%, rgba(0, 0, 0, 0.194) 65%, rgba(0, 0, 0, 0.126) 73%, rgba(0, 0, 0, 0.075) 80.2%, rgba(0, 0, 0, 0.042) 86.1%, rgba(0, 0, 0, 0.021) 91%, rgba(0, 0, 0, 0.008) 95.2%, rgba(0, 0, 0, 0.002) 98.2%, transparent 100%);
+    z-index: 16;
+    opacity: .3;
+} */
+
+/* nav ul {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -50%) scale(1.5) rotate(0deg);
+    left: 0;
+    text-align: center;
+    transition: all .75s cubic-bezier(0.87, 0, 0.13, 1)
+}
+
+nav ul .big-li {
+    display: inline-block;
+}
+
+nav.active ul {
+    transform: translate(0, -50%) scale(1) rotate(0deg);
+    opacity: 1;
+}
+
+li, ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul .big-li a:hover, nav ul .active a {
+    color: #fff;
+}
+
+nav li {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    transition: all .75s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+nav ul .big-li a {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0 30px;
+    line-height: 60px;
+    font-size: 42px;
+    font-family: 'Silka-SemiBold', sans-serif;
+} */
+
+a {
+    text-decoration: none;
+    outline: 0;
+    color: white;
+}
