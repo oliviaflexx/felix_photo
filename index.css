@@ -259,3 +259,79 @@ div.photo {
 .fade-in.appear {
     opacity: 1;
 }
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    z-index: 5;
+    justify-content: center;
+}
+.social-ico {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.social-ico svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    opacity: 1;
+    fill: white;
+}
+
+.social-ico svg:hover {
+    fill: #ffffff73;
+}
+
+footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.credits {
+    margin-top: 50px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer div.text {
+    text-align: center;
+    position: relative;
+}
+
+a.mail {
+    font-size: 1.5rem;
+}
+
+a.mail:hover {
+    text-decoration: underline;
+} 
+
+footer {
+    background: url(nav-pic.jpg);
+    width: 100vw;
+    background-size: cover;
+    background-position: bottom;
+    margin-top: 10%;
+    position: relative;
+
+}
+
+footer div.top-fade, footer div.left-fade {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 100vw;
+}
+
+.top-fade {
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+.left-fade {
+    background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
