@@ -1,14 +1,15 @@
 // Open/close navigation when clicked .nav-icon
-$(document).ready(function(){
-    $('.nav-icon').click(function(){
-        $('.nav-icon').toggleClass('active');
-        $("nav").toggleClass('active');
-        $("main").toggleClass('not-active');
-    });
-    $('.black-overlay').click(function(){
-        $('.nav-icon').removeClass('active');
-        $("nav").removeClass('active');
-        $("main").removeClass('active');
-    });
+function nav() {
+    let icon = document.getElementById('icon')
+    let nav = document.getElementById('nav')
+    nav_list = nav.classList
+    console.log(nav_list)
+    if (nav_list.contains('active')) {
+        icon.classList.remove('rotate_animation');
+        nav.classList.remove('active');
+    } else {
+        icon.classList.add('rotate_animation');
+        nav.classList.add('active');
+    }
     
-});
+}

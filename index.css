@@ -96,6 +96,7 @@ nav ul li:hover {
 .nav-icon {
     position: relative;
     cursor: pointer;
+    z-index: 17;
 }
 
 .nav-icon > i {
@@ -104,9 +105,6 @@ nav ul li:hover {
     z-index: 100;
 }
 
-.nav-icon:hover {
-    border-radius: 50%;
-}
 .top-part {
     display: flex;
     justify-content: space-between;
@@ -174,6 +172,7 @@ nav .nav-icon {
     position: absolute;
     left: 2%;
     top: 2%;
+    z-index: 16;
 }
 
 .title {
@@ -242,3 +241,12 @@ div.photo {
 .not-active {
     visibility: hidden;
 }
+
+.rotate_animation {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes rotate {
+    100% {transform: rotate(180deg);}
+  }
