@@ -159,8 +159,16 @@ nav ul li:hover {
 #about-text {
     padding: 10%;
     font-size: 18px;
+    font-family: 'Lato', sans-serif;
 }
 
+.personal-text {
+    font-style: italic;
+}
+.non-personal-text {
+    font-weight: 300;
+    margin-bottom: 5%;
+}
 .active {
     opacity: 1;
     visibility: visible;
