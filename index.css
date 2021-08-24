@@ -178,6 +178,7 @@ nav .nav-icon {
     text-align: center;
     font-weight: 400;
     font-size: 2.5rem;
+    font-style: italic;
 }
 
 .aerial-container {
@@ -305,11 +306,6 @@ div.photo img {
     fill: #ffffff73;
 }
 
-footer {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 .credits {
     margin-top: 50px;
     color: rgba(255, 255, 255, 0.7);
@@ -333,9 +329,10 @@ footer {
     width: 100vw;
     background-size: cover;
     background-position: bottom;
-    margin-top: 10%;
+    margin-top: 20%;
     position: relative;
-
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 footer div.top-fade, footer div.left-fade {
