@@ -2,7 +2,7 @@
 function nav() {
     let icon = document.getElementById('icon')
     let nav = document.getElementById('nav')
-    navList = nav.classList
+    let navList = nav.classList
     if (navList.contains('active')) {
         icon.classList.remove('rotate_animation');
         nav.classList.remove('active');
@@ -46,9 +46,20 @@ window.addEventListener("load", (event) => {
 })
 
 
-    
 
+document.getElementsByClassName('photo')[0].addEventListener("click", fillIt);
 
+function fillIt() {
+    let chosenSrc = this.getElementsByTagName('img')[0].src;
+    let fullIt = document.getElementById('fullscreen');
+    let fullImage = fullIt.getElementsByTagName('img')[0];
+    console.log(fullImage.src);
+    fullIt.classList.add('active');
+    fullImage.src = chosenSrc;
+}
 
+document.getElementById('fullscreen').getElementsByTagName('img')[0].addEventListener("click", unfillIt);
 
-
+function unfillIt() {
+    document.getElementById('fullscreen').classList.remove('active');
+}

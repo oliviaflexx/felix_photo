@@ -230,6 +230,11 @@ div.photo {
     position: relative;
 }
 
+div.photo img {
+    object-fit: cover;
+    width: 100%;
+    cursor: pointer;
+}
 @media screen and (max-width: 450px) {
     div.photo {
         width: 300px;
@@ -334,4 +339,33 @@ footer div.top-fade, footer div.left-fade {
 }
 .left-fade {
     background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+div#fullscreen {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    background-color: black;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .25s ease-in-out;
+}
+
+div#fullscreen img {
+    --img_width: .9 * 100vw;
+    width: 90%;
+    height: calc(var(--img_width) * .66);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+div#fullscreen.active {
+    opacity: 1;
+    visibility: visible;
 }
