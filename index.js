@@ -43,8 +43,8 @@ try {
         let chosenSrc = this.getElementsByTagName('img')[0].src;
         let fullIt = document.getElementById('fullscreen');
         let fullImage = fullIt.getElementsByTagName('img')[0];
-        fullIt.classList.add('active');
         fullImage.src = chosenSrc;
+        fullIt.classList.add('active');
     }
 
     document.getElementById('fullscreen').getElementsByTagName('img')[0].addEventListener("click", unfillIt);
@@ -58,16 +58,20 @@ try {
 }
 
 
-
 // check if its a mobile device to change video to photo
-function checkMatch(x) {
-    if (x.matches) { // If media query matches
-        backVidCon = document.getElementsByClassName("video-container")[0]
-        backVid = backVidCon.getElementsByTagName('video')[0].remove();
-        backVidCon.innerHTML += "<img id='mobile' src='/photos/st_lucia/st_lucia17.jpg'></img>";
-    }
-  }
-  
-  var x = window.matchMedia("(max-width: 480px)")
-  checkMatch(x)
+try {
+    function checkMatch(x) {
+        if (x.matches) { // If media query matches
+            backVidCon = document.getElementsByClassName("video-container")[0]
+            backVid = backVidCon.getElementsByTagName('video')[0].remove();
+            backVidCon.innerHTML += "<img id='mobile' src='/photos/st_lucia/st_lucia17.jpg'></img>";
+        }
+      }
+      
+      var x = window.matchMedia("(max-width: 480px)")
+      checkMatch(x)
+} catch (error) {
+    console.log(error)
+}
+
 

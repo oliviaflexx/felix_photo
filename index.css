@@ -232,21 +232,25 @@ section.photo-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 div.photo {
     width: 400px;
     height: 264px;
-    background-size: cover;
-    background-position: center;
     margin: 1%;
     position: relative;
 }
 
+#pro div.photo {
+    height: auto;
+}
+
 div.photo img {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     cursor: pointer;
+    height: 100%;
 }
 @media screen and (max-width: 450px) {
     div.photo {
@@ -367,10 +371,14 @@ div#fullscreen {
 }
 
 div#fullscreen img {
-    --img_width: .9 * 100vw;
+    /* --img_width: .9 * 100vw;
     width: 90%;
     height: calc(var(--img_width) * .66);
     object-fit: cover;
+    cursor: pointer; */
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
     cursor: pointer;
 }
 
