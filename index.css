@@ -26,10 +26,6 @@ div#navbarNavDropdown.collapse.navbar-collapse {
 
 #main-quote {
     position: absolute;
-    bottom: 50%;
-    padding-left: 40%;
-    padding-right: 30%;
-
 }
 .video-container {
     position: absolute;
@@ -37,6 +33,9 @@ div#navbarNavDropdown.collapse.navbar-collapse {
     height: 100vh;
     top: 0;
     z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 video {
@@ -83,7 +82,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: #726654;
+    background-color: #726654d1;
     transition: all .25s cubic-bezier(0.87, 0, 0.13, 1);
 }
 
@@ -158,9 +157,8 @@ nav ul li:hover {
 }
 
 #about-text {
-    font-family: 'Abel', sans-serif;
     padding: 10%;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .active {
@@ -178,6 +176,8 @@ nav .nav-icon {
 .title {
     margin: 80px;
     text-align: center;
+    font-weight: 400;
+    font-size: 2.5rem;
 }
 
 .aerial-container {
@@ -198,13 +198,25 @@ div.place {
     background-position: center;
     margin-bottom: 5%;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.place:hover {
+    transition: all .3s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
+div.place:hover a h2 {
+    font-size: 25px;
+}
+
+
+.place .bottom-fade {
+    height: 20vh;
+}
 div.place a h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: all .5s ease-in-out;
 }
 
 @media screen and (max-width: 800px) {
@@ -368,4 +380,10 @@ div#fullscreen img {
 div#fullscreen.active {
     opacity: 1;
     visibility: visible;
+}
+
+img#mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

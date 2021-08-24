@@ -13,21 +13,6 @@ function nav() {
 }
 
 // Intersection observer //
-/* $(window).on( "load", function() { 
-    const places = document.querySelectorAll('.fade-in');
-
-    observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-        if (entry.intersectionRatio > 0) {
-            entry.target.classList.add('appear');
-            }
-        });
-    });
-
-    places.forEach(image => {
-    observer.observe(image);
-    });
-}) */
 
 window.addEventListener("load", (event) => {
     const places = document.querySelectorAll('.fade-in');
@@ -46,20 +31,38 @@ window.addEventListener("load", (event) => {
 })
 
 
+// Fullscreen photo
+try {
+    document.getElementsByClassName('photo')[0].addEventListener("click", fillIt);
 
-document.getElementsByClassName('photo')[0].addEventListener("click", fillIt);
+    function fillIt() {
+        let chosenSrc = this.getElementsByTagName('img')[0].src;
+        let fullIt = document.getElementById('fullscreen');
+        let fullImage = fullIt.getElementsByTagName('img')[0];
+        console.log(fullImage.src);
+        fullIt.classList.add('active');
+        fullImage.src = chosenSrc;
+    }
 
-function fillIt() {
-    let chosenSrc = this.getElementsByTagName('img')[0].src;
-    let fullIt = document.getElementById('fullscreen');
-    let fullImage = fullIt.getElementsByTagName('img')[0];
-    console.log(fullImage.src);
-    fullIt.classList.add('active');
-    fullImage.src = chosenSrc;
+    document.getElementById('fullscreen').getElementsByTagName('img')[0].addEventListener("click", unfillIt);
+
+    function unfillIt() {
+        document.getElementById('fullscreen').classList.remove('active');
+    }
+
+} catch (error) {
+    console.error()
 }
 
-document.getElementById('fullscreen').getElementsByTagName('img')[0].addEventListener("click", unfillIt);
 
-function unfillIt() {
-    document.getElementById('fullscreen').classList.remove('active');
-}
+// check if its a mobile device to change video to photo
+function checkMatch(x) {
+    if (x.matches) { // If media query matches
+        backVidCon = document.getElementsByClassName("video-container")[0]
+        backVid = backVidCon.getElementsByTagName('video')[0].remove();
+        backVidCon.innerHTML += "<img id='mobile' src='/photos/st_lucia/st_lucia17.jpg'></img>";
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 480px)")
+  checkMatch(x)
