@@ -33,13 +33,16 @@ window.addEventListener("load", (event) => {
 
 // Fullscreen photo
 try {
-    document.getElementsByClassName('photo')[0].addEventListener("click", fillIt);
+    var photoElements = document.getElementsByClassName("photo");
+
+    for (var i = 0; i < photoElements.length; i++) {
+        photoElements[i].addEventListener('click', fillIt, false);
+    }
 
     function fillIt() {
         let chosenSrc = this.getElementsByTagName('img')[0].src;
         let fullIt = document.getElementById('fullscreen');
         let fullImage = fullIt.getElementsByTagName('img')[0];
-        console.log(fullImage.src);
         fullIt.classList.add('active');
         fullImage.src = chosenSrc;
     }
@@ -55,6 +58,7 @@ try {
 }
 
 
+
 // check if its a mobile device to change video to photo
 function checkMatch(x) {
     if (x.matches) { // If media query matches
@@ -66,3 +70,4 @@ function checkMatch(x) {
   
   var x = window.matchMedia("(max-width: 480px)")
   checkMatch(x)
+
