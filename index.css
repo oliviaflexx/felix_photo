@@ -400,3 +400,8 @@ img#mobile {
     height: 100%;
     object-fit: cover;
 }
+
+a.clickit {
+    display: contents;
+}
+
